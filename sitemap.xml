@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml-stylesheet type="text/xsl" href="https://chauncezhou.github.io/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://chauncezhou.github.io/post/setup_blog_with_hugo_and_github/</loc>
+    <lastmod>2019-02-22T22:17:15+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://chauncezhou.github.io/post/pytorch/intro/</loc>
+    <lastmod>2019-02-17T21:57:24+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://chauncezhou.github.io/tags/blog/</loc>
+    <lastmod>2019-02-22T22:17:15+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://chauncezhou.github.io/categories/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://chauncezhou.github.io/tags/github-pages/</loc>
+    <lastmod>2019-02-22T22:17:15+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://chauncezhou.github.io/tags/hugo/</loc>
+    <lastmod>2019-02-22T22:17:15+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://chauncezhou.github.io/post/</loc>
+    <lastmod>2019-02-22T22:17:15+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://chauncezhou.github.io/tags/pytorch/</loc>
+    <lastmod>2019-02-17T21:57:24+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://chauncezhou.github.io/categories/pytorch%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2019-02-17T21:57:24+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://chauncezhou.github.io/tags/</loc>
+    <lastmod>2019-02-22T22:17:15+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://chauncezhou.github.io/</loc>
+    <lastmod>2019-02-22T22:17:15+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://chauncezhou.github.io/categories/%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95/</loc>
+    <lastmod>2019-02-22T22:17:15+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
