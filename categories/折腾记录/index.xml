@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>利用Hugo和Github Pages搭建个人静态博客</title>
+      <title>零基础利用Hugo和Github Pages搭建个人静态博客</title>
       <link>https://chauncezhou.github.io/post/setup_blog_with_hugo_and_github/</link>
       <pubDate>Fri, 22 Feb 2019 22:17:15 +0800</pubDate>
       
       <guid>https://chauncezhou.github.io/post/setup_blog_with_hugo_and_github/</guid>
-      <description>这边文章主要用来记录自己用Hugo和Github Pages搭建静态博客的过程和方法。</description>
+      <description>引言 网上有很多搭建个人博客的方法和教程，但大多都需要花钱，本文搭建个人博客的方法完全免费，而且搭建方法及其简单。 准备 Github账号。Git</description>
     </item>
     
   </channel>

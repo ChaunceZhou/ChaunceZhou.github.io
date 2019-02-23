@@ -12,13 +12,132 @@
     
     
     <item>
-      <title>利用Hugo和Github Pages搭建个人静态博客</title>
+      <title>零基础利用Hugo和Github Pages搭建个人静态博客</title>
       <link>https://chauncezhou.github.io/post/setup_blog_with_hugo_and_github/</link>
       <pubDate>Fri, 22 Feb 2019 22:17:15 +0800</pubDate>
       
       <guid>https://chauncezhou.github.io/post/setup_blog_with_hugo_and_github/</guid>
       
-        <description>&lt;p&gt;这边文章主要用来记录自己用Hugo和Github Pages搭建静态博客的过程和方法。&lt;/p&gt;
+        <description>
+
+&lt;h3 id=&#34;引言&#34;&gt;引言&lt;/h3&gt;
+
+&lt;p&gt;网上有很多搭建个人博客的方法和教程，但大多都需要花钱，本文搭建个人博客的方法完全免费，而且搭建方法及其简单。&lt;/p&gt;
+
+&lt;h3 id=&#34;准备&#34;&gt;准备&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/&#34;&gt;Github&lt;/a&gt;账号。Github是一个免费的代码托管平台，提供&lt;a href=&#34;https://pages.github.com/&#34;&gt;Github Pages&lt;/a&gt;服务，可以免费用来托管网站。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;。静态网站生成工具，用来编译静态网站的。&lt;/li&gt;
+&lt;li&gt;Typora（非必需）。Typora是一款免费的Markdown编辑器，使用体验超好。当然也可以选其他的Markdown编译器。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;开始搭建&#34;&gt;开始搭建&lt;/h3&gt;
+
+&lt;h4 id=&#34;准备hugo&#34;&gt;准备Hugo&lt;/h4&gt;
+
+&lt;h5 id=&#34;安装hugo&#34;&gt;安装Hugo&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;brew install hugo&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;生成网站&#34;&gt;生成网站&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;hugo new site mysite&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;添加主题&#34;&gt;添加主题&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;cd mysite
+git init
+git submodule add https://github.com/xianmin/hugo-theme-jane.git themes/jane
+echo &amp;#39;theme=&amp;#34;jane&amp;#34;&amp;#39; &amp;gt;&amp;gt; config.toml
+cp themes/jane/exampleSite/full-config.toml config.toml&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;该主题展示效果好，功能较多，支持 *utteranc*评论，非常方便。&lt;/p&gt;
+
+&lt;h5 id=&#34;创建博客&#34;&gt;创建博客&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;hugo new post/my-first-post.md&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;通过Typora打开my-first-post.md进行编辑。删掉其中&lt;code&gt;draft: true&lt;/code&gt;这一行。再添加自己的文章。&lt;/p&gt;
+
+&lt;h5 id=&#34;启动hugo服务器&#34;&gt;启动Hugo服务器&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;hugo server -D&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;该步主要用来进行预览网页，在以后熟练后可以省略。&lt;/p&gt;
+
+&lt;h5 id=&#34;生成静态网页&#34;&gt;生成静态网页&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;hugo&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;执行上面命令后，会在public文件夹下生成一套静态网页，可以直接放在Github Pages上进行显示。&lt;/p&gt;
+
+&lt;h4 id=&#34;发布并托管到github&#34;&gt;发布并托管到Github&lt;/h4&gt;
+
+&lt;p&gt;上传到Github之前，先在Github中添加一个空白repository，注意不要添加如&lt;code&gt;README&lt;/code&gt;，&lt;code&gt;.gitignore&lt;/code&gt;等文档。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2019/02/24/5c717b07ecf2e.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;图中的感叹号不用管，因为我已经有一个相同名字的repo了，repo的名字必须是“GitHub 账号.github.io”。&lt;/p&gt;
+
+&lt;p&gt;然后到mysite/public文件夹下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-git&#34; data-lang=&#34;git&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-git&#34; data-lang=&#34;git&#34;&gt;git init
+git add .
+git commit	-m &amp;#34;init my blog&amp;#34;
+git remote add origin https://github.com/ChaunceZhou/ChaunceZhou.github.io.git
+git push -u origin master&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;稍等片刻，打开&lt;code&gt;https://chauncezhou.github.io/&lt;/code&gt;就可以看到你自己的博客了。&lt;/p&gt;
+
+&lt;p&gt;因为现在Github Pages必须用repo的master分支，我的方法是将public和mysite作为两个repo存放。&lt;/p&gt;
+
+&lt;h4 id=&#34;结束语&#34;&gt;结束语&lt;/h4&gt;
+
+&lt;p&gt;如果觉得图片存放比较麻烦，可以找一个&lt;a href=&#34;https://zhuanlan.zhihu.com/p/35270383&#34;&gt;免费的图床&lt;/a&gt;或者使用&lt;a href=&#34;https://portal.qiniu.com&#34;&gt;七牛云&lt;/a&gt;等。&lt;/p&gt;
 </description>
       
     </item>
