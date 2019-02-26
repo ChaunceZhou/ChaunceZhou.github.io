@@ -3,6 +3,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://chauncezhou.github.io/post/vim/tips/</loc>
+    <lastmod>2019-02-25T22:49:31+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://chauncezhou.github.io/post/setup_blog_with_hugo_and_github/</loc>
     <lastmod>2019-02-22T22:17:15+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -45,7 +52,7 @@
   
   <url>
     <loc>https://chauncezhou.github.io/post/</loc>
-    <lastmod>2019-02-22T22:17:15+08:00</lastmod>
+    <lastmod>2019-02-25T22:49:31+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -72,8 +79,22 @@
   </url>
   
   <url>
+    <loc>https://chauncezhou.github.io/tags/vim/</loc>
+    <lastmod>2019-02-25T22:49:31+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://chauncezhou.github.io/categories/vim%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A/</loc>
+    <lastmod>2019-02-25T22:49:31+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://chauncezhou.github.io/</loc>
-    <lastmod>2019-02-22T22:17:15+08:00</lastmod>
+    <lastmod>2019-02-25T22:49:31+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -81,6 +102,13 @@
   <url>
     <loc>https://chauncezhou.github.io/categories/%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95/</loc>
     <lastmod>2019-02-22T22:17:15+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://chauncezhou.github.io/tags/%E6%95%88%E7%8E%87/</loc>
+    <lastmod>2019-02-25T22:49:31+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>

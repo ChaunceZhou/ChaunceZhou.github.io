@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vim从入门到精通 on learn and share blog</title>
+    <link>https://chauncezhou.github.io/categories/vim%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A/</link>
+    <description>Recent content in Vim从入门到精通 on learn and share blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 25 Feb 2019 22:49:31 +0800</lastBuildDate>
+    
+	<atom:link href="https://chauncezhou.github.io/categories/vim%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>VIM中提高使用效率的技巧总结</title>
+      <link>https://chauncezhou.github.io/post/vim/tips/</link>
+      <pubDate>Mon, 25 Feb 2019 22:49:31 +0800</pubDate>
+      
+      <guid>https://chauncezhou.github.io/post/vim/tips/</guid>
+      <description>自己使用VIM已经有两年多的时间了，今天将自己的使用经验进行总结和记录，以期和大家共同进步。 把命令模式当作常态 首先命令模式下可以防止误操作，</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,10 +6,94 @@
     <description>Recent content on learn and share blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 22 Feb 2019 22:17:15 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 25 Feb 2019 22:49:31 +0800</lastBuildDate>
     
         <atom:link href="https://chauncezhou.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>VIM中提高使用效率的技巧总结</title>
+      <link>https://chauncezhou.github.io/post/vim/tips/</link>
+      <pubDate>Mon, 25 Feb 2019 22:49:31 +0800</pubDate>
+      
+      <guid>https://chauncezhou.github.io/post/vim/tips/</guid>
+      
+        <description>
+
+&lt;p&gt;自己使用VIM已经有两年多的时间了，今天将自己的使用经验进行总结和记录，以期和大家共同进步。&lt;/p&gt;
+
+&lt;h4 id=&#34;把命令模式当作常态&#34;&gt;把命令模式当作常态&lt;/h4&gt;
+
+&lt;p&gt;首先命令模式下可以防止误操作，其次命令模式提供了很多快速编辑文件的指令。在命令模式下可以一步切换到插入、可视化模式。多使用命令模式下提供的命令才是提高我们使用VIM进行编辑的关键。所以，只要你不在输入文字，就应该通过Esc进入命令模式。&lt;/p&gt;
+
+&lt;h4 id=&#34;充分利用vim中提供的-重复上一次操作-的功能&#34;&gt;充分利用VIM中提供的“重复上一次操作”的功能&lt;/h4&gt;
+
+&lt;p&gt;举个例子，如下文本：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;one two three four five&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;目标是将单词间的空格换成逗号，如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;one,two,three,four,five&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;首先在命令模式下键入&lt;code&gt;0&lt;/code&gt;，将光标定位到行首，然后键入&lt;code&gt;f&amp;lt;space&amp;gt;&lt;/code&gt;,&lt;space&gt;代表空格，光标将向右找到第一个空格的位置，然后键入&lt;code&gt;c&amp;lt;space&amp;gt;,&lt;/code&gt;，就可以将空格删除替换为逗号。最后连续键入&lt;code&gt;；.&lt;/code&gt;三次就可以将剩余的三个空格替换为逗号，最终的到：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;one,two,three,four,five&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;在上面的例子中最终的两个命令是&lt;code&gt;;&lt;/code&gt;和&lt;code&gt;.&lt;/code&gt;。&lt;code&gt;；&lt;/code&gt;重复上一次的查找操作，&lt;code&gt;.&lt;/code&gt;重复上一次的编辑操作。&lt;/p&gt;
+
+&lt;h4 id=&#34;多使用除了-i-以外其他的插入命令&#34;&gt;多使用除了&lt;code&gt;i&lt;/code&gt;以外其他的插入命令&lt;/h4&gt;
+
+&lt;p&gt;对于新手来说，一般都是直接在命令模式键入&lt;code&gt;i&lt;/code&gt;来进入插入模式，但是在很多情况下，这种方式是低效的。VIM提供了各种高效进入VIM插入模式的命令，以匹配各种场景。主要如下：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I：将光标移到行首，并进入插入模式；&lt;/li&gt;
+&lt;li&gt;A：将光标移到行尾，并进入插入模式；&lt;/li&gt;
+&lt;li&gt;a: 将光标定位到当前字符的后面，并进入插入模式；&lt;/li&gt;
+&lt;li&gt;o:在当前行下面插入一个新行，并进入插入模式；&lt;/li&gt;
+&lt;li&gt;O:在当前行的上一行插入一个空行，并进入插入模式；&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;高效移动&#34;&gt;高效移动&lt;/h4&gt;
+
+&lt;p&gt;我们最常见的光标移动按键是&lt;code&gt;HJKL&lt;/code&gt;，虽然很常用，但一般情况下都是比较低效的。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;最简单的，数字+&lt;code&gt;H/J/K/L&lt;/code&gt;可以快速地进行多行跳转，比如&lt;code&gt;3j&lt;/code&gt;代表向下跳转3行；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;w、e、b&lt;/code&gt;：按照单词进行前后光标跳转，也可以组合数字进行跳转，不过以我的经验，与其去算要跳多少个单词，不如多按几次；&lt;code&gt;w&lt;/code&gt;按照单词向后跳，每次跳到词首；&lt;code&gt;b&lt;/code&gt;按照单词向前跳，每次跳到词首；&lt;code&gt;e&lt;/code&gt;按照单词向后跳，每次跳到词尾；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;I&lt;/code&gt;、&lt;code&gt;A&lt;/code&gt;：移动到行首或行末的第一个字符处，并进入插入模式；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;H&lt;/code&gt;、&lt;code&gt;M&lt;/code&gt;、&lt;code&gt;L&lt;/code&gt;：光标分别跳转到可视区域的最上面、中间、最下面;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Ctrl+d&lt;/code&gt;、&lt;code&gt;Ctrl+u&lt;/code&gt;：向下向上翻半页；&lt;code&gt;Ctrl+f&lt;/code&gt;、&lt;code&gt;Ctrl+b&lt;/code&gt;：向下向上翻整页；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;^、$&lt;/code&gt;、&lt;code&gt;0&lt;/code&gt;：光标移动到行首和行尾（&lt;code&gt;0&lt;/code&gt; 是绝对行首，&lt;code&gt;^&lt;/code&gt;是第一个非空字符);&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;%&lt;/code&gt;：移动到与当前括号匹配的括号处;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;f&lt;/code&gt;、&lt;code&gt;F&lt;/code&gt;：通过上面的例子，我们知道，&lt;code&gt;f&lt;/code&gt;是 find 的意思，可以在一行内查找某个字符出现的位置，并直接跳转过去。比如&lt;code&gt;f&amp;lt;&lt;/code&gt;可以从当前光标开始向右，找到第一个&lt;code&gt;&amp;lt;&lt;/code&gt;，并移动过去。F 是向左查找;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;;&lt;/code&gt;：重复上一次的&lt;code&gt;f&lt;/code&gt;查找操作;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.&lt;/code&gt;：重复上一次的修改操作，跟&lt;code&gt;;&lt;/code&gt;可以说是好基友，经常用来实现一些简单的重复操作，比录制宏要简单很多;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;高效修改&#34;&gt;高效修改&lt;/h4&gt;
+
+&lt;h4 id=&#34;建立起单词-句子-段落等语句块概念&#34;&gt;建立起单词、句子、段落等语句块概念&lt;/h4&gt;
+
+&lt;p&gt;一般的，我们在输入文本时都是一个字母一个字母的输入的，在进行文本修改时，我们应该避免这种惯性。建立起单词、句子、行这种概念，多多利用针对这种语句块的快捷键。尽可能少用&lt;code&gt;HJKL&lt;/code&gt;这样的单步移动操作。&lt;/p&gt;
+</description>
+      
+    </item>
     
     <item>
       <title>零基础利用Hugo和Github Pages搭建个人静态博客</title>
@@ -110,7 +194,7 @@ cp themes/jane/exampleSite/full-config.toml config.toml&lt;/pre&gt;&lt;/td&gt;&l
 
 &lt;p&gt;上传到Github之前，先在Github中添加一个空白repository，注意不要添加如&lt;code&gt;README&lt;/code&gt;，&lt;code&gt;.gitignore&lt;/code&gt;等文档。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2019/02/24/5c717b07ecf2e.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://pnf9x0xtf.bkt.clouddn.com/github_repo.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;图中的感叹号不用管，因为我已经有一个相同名字的repo了，repo的名字必须是“GitHub 账号.github.io”。&lt;/p&gt;
 

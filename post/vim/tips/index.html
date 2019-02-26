@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Categories - learn and share blog</title>
+  <title>VIM中提高使用效率的技巧总结 - learn and share blog</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,7 +23,8 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Chaunce Zhou" />
-  <meta name="description" content="Some notes during learning." />
+  <meta name="description" content="自己使用VIM已经有两年多的时间了，今天将自己的使用经验进行总结和记录，以期和大家共同进步。 把命令模式当作常态 首先命令模式下可以防止误操作，" />
+
   <meta name="keywords" content="Hugo, theme, jane" />
 
 
@@ -34,8 +35,7 @@
 <meta name="generator" content="Hugo 0.53" />
 
 
-<link rel="canonical" href="https://chauncezhou.github.io/categories/" />
-<link href="https://chauncezhou.github.io/categories/index.xml" rel="alternate" type="application/rss+xml" title="learn and share blog" />
+<link rel="canonical" href="https://chauncezhou.github.io/post/vim/tips/" />
 
 
 
@@ -57,17 +57,26 @@
 
 
 
-<meta property="og:title" content="Categories" />
-<meta property="og:description" content="Some notes during learning." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://chauncezhou.github.io/categories/" />
+<meta property="og:title" content="VIM中提高使用效率的技巧总结" />
+<meta property="og:description" content="自己使用VIM已经有两年多的时间了，今天将自己的使用经验进行总结和记录，以期和大家共同进步。 把命令模式当作常态 首先命令模式下可以防止误操作，" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chauncezhou.github.io/post/vim/tips/" /><meta property="article:published_time" content="2019-02-25T22:49:31&#43;08:00"/>
+<meta property="article:modified_time" content="2019-02-25T22:49:31&#43;08:00"/>
 
-<meta itemprop="name" content="Categories">
-<meta itemprop="description" content="Some notes during learning.">
+<meta itemprop="name" content="VIM中提高使用效率的技巧总结">
+<meta itemprop="description" content="自己使用VIM已经有两年多的时间了，今天将自己的使用经验进行总结和记录，以期和大家共同进步。 把命令模式当作常态 首先命令模式下可以防止误操作，">
 
+
+<meta itemprop="datePublished" content="2019-02-25T22:49:31&#43;08:00" />
+<meta itemprop="dateModified" content="2019-02-25T22:49:31&#43;08:00" />
+<meta itemprop="wordCount" content="1223">
+
+
+
+<meta itemprop="keywords" content="vim,效率," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Categories"/>
-<meta name="twitter:description" content="Some notes during learning."/>
+<meta name="twitter:title" content="VIM中提高使用效率的技巧总结"/>
+<meta name="twitter:description" content="自己使用VIM已经有两年多的时间了，今天将自己的使用经验进行总结和记录，以期和大家共同进步。 把命令模式当作常态 首先命令模式下可以防止误操作，"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -237,7 +246,7 @@
 
       </li>
     
-        <li class="menu-item active">
+        <li class="menu-item">
         
           
           
@@ -258,108 +267,216 @@
     <main id="main" class="main bg-llight">
       <div class="content-wrapper">
         <div id="content" class="content container">
-          
-  
-  
-  
-  
-
-  
-  
+          <article class="post bg-white">
     
-    
-    
-    
-      <section id="archive" class="archive">
-        <div class="archive-title">
-        </div>
-          <div class="collection-title">
-            <h2 class="archive-year">
-              <a href="https://chauncezhou.github.io/categories/pytorch%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-                Category: pytorch学习笔记
-              </a>
-            </h2>
+    <header class="post-header">
+      <h1 class="post-title">VIM中提高使用效率的技巧总结</h1>
+      
+      <div class="post-meta">
+        <time datetime="2019-02-25" class="post-time">
+          2019-02-25
+        </time>
+        <div class="post-category">
+            
           </div>
+        <span class="more-meta"> 1223 words </span>
+          <span class="more-meta"> 3 min read </span>
 
+        
+        
+          <span id="busuanzi_container_page_pv">
+            | 阅读 <span id="busuanzi_value_page_pv"></span>
+          </span>
+        
+
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#把命令模式当作常态">把命令模式当作常态</a></li>
+<li><a href="#充分利用vim中提供的-重复上一次操作-的功能">充分利用VIM中提供的“重复上一次操作”的功能</a></li>
+<li><a href="#多使用除了-i-以外其他的插入命令">多使用除了<code>i</code>以外其他的插入命令</a></li>
+<li><a href="#高效移动">高效移动</a></li>
+<li><a href="#高效修改">高效修改</a></li>
+<li><a href="#建立起单词-句子-段落等语句块概念">建立起单词、句子、段落等语句块概念</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      
+
+<p>自己使用VIM已经有两年多的时间了，今天将自己的使用经验进行总结和记录，以期和大家共同进步。</p>
+
+<h4 id="把命令模式当作常态">把命令模式当作常态</h4>
+
+<p>首先命令模式下可以防止误操作，其次命令模式提供了很多快速编辑文件的指令。在命令模式下可以一步切换到插入、可视化模式。多使用命令模式下提供的命令才是提高我们使用VIM进行编辑的关键。所以，只要你不在输入文字，就应该通过Esc进入命令模式。</p>
+
+<h4 id="充分利用vim中提供的-重复上一次操作-的功能">充分利用VIM中提供的“重复上一次操作”的功能</h4>
+
+<p>举个例子，如下文本：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">one two three four five</pre></td></tr></table>
+</div>
+</div>
+<p>目标是将单词间的空格换成逗号，如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">one,two,three,four,five</pre></td></tr></table>
+</div>
+</div>
+<p>首先在命令模式下键入<code>0</code>，将光标定位到行首，然后键入<code>f&lt;space&gt;</code>,<space>代表空格，光标将向右找到第一个空格的位置，然后键入<code>c&lt;space&gt;,</code>，就可以将空格删除替换为逗号。最后连续键入<code>；.</code>三次就可以将剩余的三个空格替换为逗号，最终的到：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">one,two,three,four,five</pre></td></tr></table>
+</div>
+</div>
+<p>在上面的例子中最终的两个命令是<code>;</code>和<code>.</code>。<code>；</code>重复上一次的查找操作，<code>.</code>重复上一次的编辑操作。</p>
+
+<h4 id="多使用除了-i-以外其他的插入命令">多使用除了<code>i</code>以外其他的插入命令</h4>
+
+<p>对于新手来说，一般都是直接在命令模式键入<code>i</code>来进入插入模式，但是在很多情况下，这种方式是低效的。VIM提供了各种高效进入VIM插入模式的命令，以匹配各种场景。主要如下：</p>
+
+<ul>
+<li>I：将光标移到行首，并进入插入模式；</li>
+<li>A：将光标移到行尾，并进入插入模式；</li>
+<li>a: 将光标定位到当前字符的后面，并进入插入模式；</li>
+<li>o:在当前行下面插入一个新行，并进入插入模式；</li>
+<li>O:在当前行的上一行插入一个空行，并进入插入模式；</li>
+</ul>
+
+<h4 id="高效移动">高效移动</h4>
+
+<p>我们最常见的光标移动按键是<code>HJKL</code>，虽然很常用，但一般情况下都是比较低效的。</p>
+
+<ul>
+<li>最简单的，数字+<code>H/J/K/L</code>可以快速地进行多行跳转，比如<code>3j</code>代表向下跳转3行；</li>
+<li><code>w、e、b</code>：按照单词进行前后光标跳转，也可以组合数字进行跳转，不过以我的经验，与其去算要跳多少个单词，不如多按几次；<code>w</code>按照单词向后跳，每次跳到词首；<code>b</code>按照单词向前跳，每次跳到词首；<code>e</code>按照单词向后跳，每次跳到词尾；</li>
+<li><code>I</code>、<code>A</code>：移动到行首或行末的第一个字符处，并进入插入模式；</li>
+<li><code>H</code>、<code>M</code>、<code>L</code>：光标分别跳转到可视区域的最上面、中间、最下面;</li>
+<li><code>Ctrl+d</code>、<code>Ctrl+u</code>：向下向上翻半页；<code>Ctrl+f</code>、<code>Ctrl+b</code>：向下向上翻整页；</li>
+<li><code>^、$</code>、<code>0</code>：光标移动到行首和行尾（<code>0</code> 是绝对行首，<code>^</code>是第一个非空字符);</li>
+<li><code>%</code>：移动到与当前括号匹配的括号处;</li>
+<li><code>f</code>、<code>F</code>：通过上面的例子，我们知道，<code>f</code>是 find 的意思，可以在一行内查找某个字符出现的位置，并直接跳转过去。比如<code>f&lt;</code>可以从当前光标开始向右，找到第一个<code>&lt;</code>，并移动过去。F 是向左查找;</li>
+<li><code>;</code>：重复上一次的<code>f</code>查找操作;</li>
+<li><code>.</code>：重复上一次的修改操作，跟<code>;</code>可以说是好基友，经常用来实现一些简单的重复操作，比录制宏要简单很多;</li>
+</ul>
+
+<h4 id="高效修改">高效修改</h4>
+
+<h4 id="建立起单词-句子-段落等语句块概念">建立起单词、句子、段落等语句块概念</h4>
+
+<p>一般的，我们在输入文本时都是一个字母一个字母的输入的，在进行文本修改时，我们应该避免这种惯性。建立起单词、句子、行这种概念，多多利用针对这种语句块的快捷键。尽可能少用<code>HJKL</code>这样的单步移动操作。</p>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Chaunce Zhou</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2019-02-25</span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="https://chauncezhou.github.io/tags/vim/">vim</a>
+          <a href="https://chauncezhou.github.io/tags/%E6%95%88%E7%8E%87/">效率</a>
           
-            <div class="archive-post">
-              <time datetime="2019-02-17" class="archive-post-time">
-                2019-02-17
-              </time>
-              <span class="archive-post-title">
-                <a href="/post/pytorch/intro/" class="archive-post-link">
-                  Pytorch学习前言
-                </a>
-              </span>
-            </div>
-          
-          
-      </section>
-    
-    
-    
-    
-    
-      <section id="archive" class="archive">
-        <div class="archive-title">
         </div>
-          <div class="collection-title">
-            <h2 class="archive-year">
-              <a href="https://chauncezhou.github.io/categories/vim%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A/">
-                Category: vim从入门到精通
-              </a>
-            </h2>
-          </div>
 
-          
-            <div class="archive-post">
-              <time datetime="2019-02-25" class="archive-post-time">
-                2019-02-25
-              </time>
-              <span class="archive-post-title">
-                <a href="/post/vim/tips/" class="archive-post-link">
-                  VIM中提高使用效率的技巧总结
-                </a>
-              </span>
-            </div>
-          
-          
-      </section>
-    
-    
-    
-    
-    
-      <section id="archive" class="archive">
-        <div class="archive-title">
-        </div>
-          <div class="collection-title">
-            <h2 class="archive-year">
-              <a href="https://chauncezhou.github.io/categories/%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95/">
-                Category: 折腾记录
-              </a>
-            </h2>
-          </div>
+      
+      <nav class="post-nav">
+        
+        
+          <a class="next" href="/post/setup_blog_with_hugo_and_github/">
+            <span class="next-text nav-default">零基础利用Hugo和Github Pages搭建个人静态博客</span>
+            <span class="prev-text nav-mobile">Next</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
 
-          
-            <div class="archive-post">
-              <time datetime="2019-02-22" class="archive-post-time">
-                2019-02-22
-              </time>
-              <span class="archive-post-title">
-                <a href="/post/setup_blog_with_hugo_and_github/" class="archive-post-link">
-                  零基础利用Hugo和Github Pages搭建个人静态博客
-                </a>
-              </span>
-            </div>
-          
-          
-      </section>
-    
-    
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
 
   
   
+  
+  
+
+  
+  
+
+  
+  
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "ChaunceZhou/ChaunceZhou.github.io"
+            issue-term="pathname"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
+  
+
+  
+
+  
+
+  
+  
+    
+
 
 
         </div>
