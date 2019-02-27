@@ -86,11 +86,84 @@
 &lt;li&gt;&lt;code&gt;.&lt;/code&gt;：重复上一次的修改操作，跟&lt;code&gt;;&lt;/code&gt;可以说是好基友，经常用来实现一些简单的重复操作，比录制宏要简单很多;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&#34;高效修改&#34;&gt;高效修改&lt;/h4&gt;
+&lt;h4 id=&#34;命令组合&#34;&gt;命令组合&lt;/h4&gt;
+
+&lt;p&gt;在命令模式下，我们可以将&lt;code&gt;c&lt;/code&gt;、&lt;code&gt;y&lt;/code&gt;这样的命令加上一个选择范围的指令进行组合。&lt;/p&gt;
+
+&lt;p&gt;使用操作分隔符的文本对象的命令 &lt;code&gt;i&lt;/code&gt; (inside) 以配对的符号作为开始和结束，&lt;code&gt;a&lt;/code&gt; (around) 则会额外包含指定前面或后面的分隔符。&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;文本对象&lt;/th&gt;
+&lt;th&gt;选择范围&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;iw&lt;/td&gt;
+&lt;td&gt;当前单词 (inside word)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;aw&lt;/td&gt;
+&lt;td&gt;当前单词及一个分隔符 (around word)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;iW&lt;/td&gt;
+&lt;td&gt;当前字串 (inside WORD)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;aW&lt;/td&gt;
+&lt;td&gt;当前字串及一个分隔符 (around WORD)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;is&lt;/td&gt;
+&lt;td&gt;当前句子 (inside sentence)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;as&lt;/td&gt;
+&lt;td&gt;当前句子及一个分隔符 (around sentence)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ip&lt;/td&gt;
+&lt;td&gt;当前段落 (inside paragraph)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ap&lt;/td&gt;
+&lt;td&gt;当前段落及&lt;strong&gt;一个空行&lt;/strong&gt; (around paragraph)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;caw&lt;/code&gt;：&lt;code&gt;change around word&lt;/code&gt;可以删除当前光标所在位置的单词；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ci&amp;quot;&lt;/code&gt;：&lt;code&gt;change inside &amp;quot;&lt;/code&gt;可以用于修改当前位置附近，在相同配对的&lt;code&gt;&amp;quot;&lt;/code&gt;中的内容；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ya&amp;quot;：yank around &amp;quot;&lt;/code&gt; 复制整个字符串，包括双引号；&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;常见的编辑命令一般都可以组合，多多练习，自然熟能生巧～&lt;/p&gt;
 
 &lt;h4 id=&#34;建立起单词-句子-段落等语句块概念&#34;&gt;建立起单词、句子、段落等语句块概念&lt;/h4&gt;
 
 &lt;p&gt;一般的，我们在输入文本时都是一个字母一个字母的输入的，在进行文本修改时，我们应该避免这种惯性。建立起单词、句子、行这种概念，多多利用针对这种语句块的快捷键。尽可能少用&lt;code&gt;HJKL&lt;/code&gt;这样的单步移动操作。&lt;/p&gt;
+
+&lt;p&gt;参考：&lt;/p&gt;
+
+&lt;p&gt;1、&lt;a href=&#34;https://vim.ink/&#34;&gt;专注于Vim配置、插件、Vim命令和Vim教程&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;2、&lt;a href=&#34;https://cloud.tencent.com/developer/article/1149240&#34;&gt;练了一年再来总结的 Vim 使用技巧&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;3、&lt;a href=&#34;https://vim.ink/categories/Vim%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/&#34;&gt;vim入门教程&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;4、&lt;a href=&#34;https://vim.ink/categories/Vim%E6%8A%80%E5%B7%A7/&#34;&gt;vim使用技巧&lt;/a&gt;&lt;/p&gt;
 </description>
       
     </item>

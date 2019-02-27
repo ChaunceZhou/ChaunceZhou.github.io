@@ -69,7 +69,7 @@
 
 <meta itemprop="datePublished" content="2019-02-25T22:49:31&#43;08:00" />
 <meta itemprop="dateModified" content="2019-02-25T22:49:31&#43;08:00" />
-<meta itemprop="wordCount" content="1223">
+<meta itemprop="wordCount" content="1598">
 
 
 
@@ -279,8 +279,8 @@
         <div class="post-category">
             
           </div>
-        <span class="more-meta"> 1223 words </span>
-          <span class="more-meta"> 3 min read </span>
+        <span class="more-meta"> 1598 words </span>
+          <span class="more-meta"> 4 min read </span>
 
         
         
@@ -311,7 +311,7 @@
 <li><a href="#充分利用vim中提供的-重复上一次操作-的功能">充分利用VIM中提供的“重复上一次操作”的功能</a></li>
 <li><a href="#多使用除了-i-以外其他的插入命令">多使用除了<code>i</code>以外其他的插入命令</a></li>
 <li><a href="#高效移动">高效移动</a></li>
-<li><a href="#高效修改">高效修改</a></li>
+<li><a href="#命令组合">命令组合</a></li>
 <li><a href="#建立起单词-句子-段落等语句块概念">建立起单词、句子、段落等语句块概念</a></li>
 </ul></li>
 </ul></li>
@@ -391,11 +391,84 @@
 <li><code>.</code>：重复上一次的修改操作，跟<code>;</code>可以说是好基友，经常用来实现一些简单的重复操作，比录制宏要简单很多;</li>
 </ul>
 
-<h4 id="高效修改">高效修改</h4>
+<h4 id="命令组合">命令组合</h4>
+
+<p>在命令模式下，我们可以将<code>c</code>、<code>y</code>这样的命令加上一个选择范围的指令进行组合。</p>
+
+<p>使用操作分隔符的文本对象的命令 <code>i</code> (inside) 以配对的符号作为开始和结束，<code>a</code> (around) 则会额外包含指定前面或后面的分隔符。</p>
+
+<table>
+<thead>
+<tr>
+<th>文本对象</th>
+<th>选择范围</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>iw</td>
+<td>当前单词 (inside word)</td>
+</tr>
+
+<tr>
+<td>aw</td>
+<td>当前单词及一个分隔符 (around word)</td>
+</tr>
+
+<tr>
+<td>iW</td>
+<td>当前字串 (inside WORD)</td>
+</tr>
+
+<tr>
+<td>aW</td>
+<td>当前字串及一个分隔符 (around WORD)</td>
+</tr>
+
+<tr>
+<td>is</td>
+<td>当前句子 (inside sentence)</td>
+</tr>
+
+<tr>
+<td>as</td>
+<td>当前句子及一个分隔符 (around sentence)</td>
+</tr>
+
+<tr>
+<td>ip</td>
+<td>当前段落 (inside paragraph)</td>
+</tr>
+
+<tr>
+<td>ap</td>
+<td>当前段落及<strong>一个空行</strong> (around paragraph)</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><code>caw</code>：<code>change around word</code>可以删除当前光标所在位置的单词；</li>
+<li><code>ci&quot;</code>：<code>change inside &quot;</code>可以用于修改当前位置附近，在相同配对的<code>&quot;</code>中的内容；</li>
+<li><code>ya&quot;：yank around &quot;</code> 复制整个字符串，包括双引号；</li>
+</ul>
+
+<p>常见的编辑命令一般都可以组合，多多练习，自然熟能生巧～</p>
 
 <h4 id="建立起单词-句子-段落等语句块概念">建立起单词、句子、段落等语句块概念</h4>
 
 <p>一般的，我们在输入文本时都是一个字母一个字母的输入的，在进行文本修改时，我们应该避免这种惯性。建立起单词、句子、行这种概念，多多利用针对这种语句块的快捷键。尽可能少用<code>HJKL</code>这样的单步移动操作。</p>
+
+<p>参考：</p>
+
+<p>1、<a href="https://vim.ink/">专注于Vim配置、插件、Vim命令和Vim教程</a></p>
+
+<p>2、<a href="https://cloud.tencent.com/developer/article/1149240">练了一年再来总结的 Vim 使用技巧</a></p>
+
+<p>3、<a href="https://vim.ink/categories/Vim%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/">vim入门教程</a></p>
+
+<p>4、<a href="https://vim.ink/categories/Vim%E6%8A%80%E5%B7%A7/">vim使用技巧</a></p>
 
     </div>
 
